@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  width: fit-content;
+  margin-top: 5px;
+}
+.mood {
+  padding: 8px;
+  line-height: 1;
+}
+.default-mood {
+  background-color: gray;
+}
+.not-happy {
+  background-color: darkblue;
+}
+.happy {
+  background-color: orange;
+}
+.very-happy {
+  background-color: hotpink;
+}
