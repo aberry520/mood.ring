@@ -1,3 +1,5 @@
+'use strict';
+
 const submit = document.querySelector("#submit")
 
 submit.addEventListener("click", function(event){
@@ -5,20 +7,23 @@ submit.addEventListener("click", function(event){
   const moodInput= document.querySelector("[name=mood]:checked");
   const myMood = document.querySelector("#myMood");
   const moodValue = moodInput.value;
-  myMood.innerHTML = moodInput.value;
+  myMood.innerHTML = moodValue;
   const classes = myMood.classList;
+  console.log(classes);
   classes.toggle("default-mood");
 
   switch(moodValue) {
     case 'Not Happy':
-      classes.toggle("not-happy")
+      classes.add("not-happy")
+      classes.remove("happy", "very-happy")
       break
     case 'Happy':
-      classes.toggle("happy")
+      classes.add("happy")
+      classes.remove("not-happy", "very-happy")
       break
     case 'Very Happy':
-      classes.toggle("very-happy")
+      classes.add("very-happy")
+      classes.remove(["not-happy", "happy"])
       break
   }
 })
-
