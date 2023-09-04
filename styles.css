@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  color: white;
 }
 fieldset {
   display: flex;
@@ -12,6 +13,9 @@ button {
 .mood {
   padding: 8px;
   line-height: 1;
+}
+span{
+  color: white;
 }
 .default-mood {
   background-color: gray;
